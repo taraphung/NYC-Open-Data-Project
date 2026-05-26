@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Info Cards</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="fillDropDown.js"></script>
+    <script src="script.js"></script>
+   </head>
+
+
+<body onload="init()"></body>
+<nav class="container">
+  <a href="index.html"> Home Page </a>
+  <a href="info.html"> Info Cards </a>
+  <a href="analysis.html"> Analysis </a>
+</nav>
+
+
+    <div class="container subbanner">
+      <div>
+        <a class="button" href="https://opendata.cityofnewyork.us/" target="_blank">NYC Open Data</a>
+       </div>
+    </div>
+
+    <div class="container">
+      <div id="leftPanel">
+      
+        <div class="card">
+          <h3>Search By Tree Status and Tree Name </h3>
+          <input type="text" id="status" placeholder="Enter Tree Status">
+          <select id="treename"></select>
+          <hr></hr>
+          <a class="button" onclick="filterByStatusName()"> Search </a>
+        </div>
+
+
+        <div class="card">
+          <h3>Search By Zipcode and Damage on Sidewalk</h3>
+          <input type="text" id="zipcode" placeholder="Enter Zipcode">
+          <select id="damage"></select>
+          <hr></hr>
+          <a class="button" onclick="filterByDamageZip()"> Search </a>
+        </div>
+
+
+      </div>
+
+      <div class="card" id="rightPanel">
+        <h1> Data Cards </h1>
+        <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
+      </div>
+      
+    </div>
+
+    <div id="footer2" class="container center">
+      <p>Copyright 2025 by Tara Phung. All Rights Reserved. Bayside High School, Grade 10 (Period:8)</p>
+    </div>  
+  </body>
+</html>
