@@ -1,36 +1,41 @@
 <!DOCTYPE html>
-
 <html>
   <head>
-    <title>Analysis</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Analysis Charts</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="c3.css" rel="stylesheet" type="text/css" />
+    <script src="c3.js"></script>
+    <script src="d3.js"></script>    
     <script src="script.js"></script>
-    <style>
-
-body{
-  background-color:rgb(194, 221, 255);
-}
-    
-    </style>
-  </head>
-  <body>
-    
+   </head>
 <nav class="container">
   <a href="index.html"> Home Page </a>
   <a href="info.html"> Info Cards </a>
   <a href="analysis.html"> Analysis </a>
 </nav>
+   
+  <body onload="init()">
+    <div id="banner2" class="container center">
+      <h1> Chart Analysis </h1>
+    </div>
+    <div class="container">
+      <p><span class="highlight">Scenario: </span> The Bar chart analyzes the status of the trees. </p>
+      <a class="button" onclick="ByStatus()"> Display Bar Chart </a>
+      <hr>
+      <p><span class="highlight">Scenario: </span> The Pie chart analyzes the amount of </p>
+      <a class="button" onclick="By()"> Display Pie Chart </a>
+      <hr>
+      <p><span class="highlight">Scenario: </span> The Donut chart analyzes the amount of </p>
+      <a class="button" onclick="ByAgency()"> Display Donut Chart </a>
+    </div>
+    <div class="container subbanner"><br></div>
+
+    <div id="output"></div> 
     
-<div id="banner3" class="container">
-  <h1> Analysis </h1>
-</div>
-
-
-
-
-  <div id="footer3" class="container"> 
-    <p>Copyright 2025 by Tara Phung. All Rights Reserved. Bayside High School, Grade 10 (Period:8)</p>
-  </div>
-
+    <div id="footer3" class="container center">
+      <p>Copyright 2026 by Tara Phung. All Rights Reserved. Bayside High School, Grade 10 (Period: 8)</p>
+    </div>  
   </body>
 </html>

@@ -20,8 +20,8 @@ async function init(){
                   <p>Address: ${tree.address}</p>
                   <p>Status: ${tree.status}</p>
                   <p>Damage on Sidewalk: ${tree.sidewalk}</p>
-                  <p>Latitude: ${tree.latitude}</p>
-                  <p>Longitude: ${tree.longitude}</p>
+                  <p>Health: ${tree.health}</p>
+                  <p>Problems: ${tree.problems}</p>
               </div>`;
     ct++;
   }
@@ -60,8 +60,8 @@ function filterByStatusName(){
                     <p>Address: ${tree.address}</p>
                     <p>Status: ${tree.status}</p>
                     <p>Damage on Sidewalk: ${tree.sidewalk}</p>
-                    <p>Latitude: ${tree.latitude}</p>
-                    <p>Longitude: ${tree.longitude}</p>
+                    <p>Health: ${tree.health}</p>
+                    <p>Problems: ${tree.problems}</p>
                 </div>`;
       ct += 1;
     }
@@ -86,8 +86,8 @@ function filterByDamageZip(){
                     <p>Address: ${tree.address}</p>
                     <p>Status: ${tree.status}</p>
                     <p>Damage on Sidewalk: ${tree.sidewalk}</p>
-                    <p>Latitude: ${tree.latitude}</p>
-                    <p>Longitude: ${tree.longitude}</p>
+                    <p>Health: ${tree.health}</p>
+                    <p>Problems: ${tree.problems}</p>
                 </div>`;
       ct += 1;
     }
@@ -95,3 +95,55 @@ function filterByDamageZip(){
   result.innerHTML = `${ct} Results found`;
   output.innerHTML = build;
 }
+
+
+
+
+
+
+let data, info, output;
+
+async function init(){
+  let link = "https://data.cityofnewyork.us/resource/uvpi-gqnh.json"; 
+  info = await fetch(link);
+  data = await info.json();
+  console.log(data);
+}
+
+function ByStatus(){
+  let s = 0, dot = 0, hpd = 0, other = 0;
+
+  for(let i = 0; i < data.length; i++){
+    let complaint = data[i];
+    if(complaint.agency=="NYPD"){
+      nypd++;
+    }else if (complaint.agency=="DOT"){
+      dot++;
+    }else if (complaint.agency=="HPD"){
+      hpd++;
+    }else other++;
+
+  }
+  let chartData = [
+      ["NYC Police Department", nypd],
+      ["Dept of Transportation", dot],
+      ["Dept of Housing Preservation and Development", hpd],
+      ["OTHER", other]
+    ];
+
+  let chartType = document.getElementById("chartType").value;
+
+  displayChart(chartData, "output", chartType);
+}
+
+
+function displayChart( data, chart_id, chart_type ){
+  let chart = c3.generate({
+    bindto: `#${chart_id}`,
+    data: {
+      columns: data,
+      type: chart_type
+    }
+  });
+}
+

@@ -40,13 +40,29 @@ nav a:hover{
   background-position:center;
   color:white;
   height:545px;
-  transition:filter 0.3s;
+}
+
+#banner2{
+  align-items:center;
+  justify-content:center;
+  background-image: url("images/bannertree2.jpg");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  height:300px;
 }
 
 
 #banner h1{
   background-color:rgb(39, 12, 43);
   color:rgb(99, 187, 130);
+  padding:10px;
+  border-radius:8px;
+}
+
+#banner2 h1{
+  background-color:rgb(77, 71, 58);
+  color:rgb(211, 170, 205);
   padding:10px;
   border-radius:8px;
 }
