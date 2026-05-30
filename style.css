@@ -2,8 +2,8 @@
 .container{
   display:flex;
   padding:10px;
+  text-align:center;
 }
-
 
 html,body{
   margin:0 auto;
@@ -36,7 +36,7 @@ nav a:hover{
 #banner{
   align-items:center;
   justify-content:center;
-  background-image: url("images/banner1.jpg");
+  background-image: url("images/banner0.jpg");
   background-size:cover;
   background-position:center;
   color:white;
@@ -53,15 +53,32 @@ nav a:hover{
   height:300px;
 }
 
+#banner3{
+  align-items:center;
+  justify-content:center;
+  background-image: url("images/");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  height:300px;
+}
+
 
 #banner h1{
-  background-color:rgb(39, 12, 43);
-  color:rgb(99, 187, 130);
+  background-color:rgb(243, 247, 203);
+  color:rgb(85, 109, 84);
   padding:10px;
   border-radius:8px;
 }
 
 #banner2 h1{
+  background-color:rgb(77, 71, 58);
+  color:rgb(211, 170, 205);
+  padding:10px;
+  border-radius:8px;
+}
+
+#banner3 h1{
   background-color:rgb(77, 71, 58);
   color:rgb(211, 170, 205);
   padding:10px;
@@ -99,9 +116,13 @@ h1{
   padding:2px;
 }
 
+#one img{
+  width:615px;
+}
+
 #two{
   font-size:21px;
-  background-color:rgb(99, 147, 220);
+  background-color:rgb(25, 89, 2);
   color:white;
   transition:0.5s;
   padding:2px;
@@ -125,8 +146,8 @@ h1{
 #footer p{
    flex:1;
    text-align:center;
-   color:rgb(218, 220, 243);
-   background-color:rgb(101, 62, 128);
+   color:rgb(6, 82, 5);
+   background-color:rgb(186, 240, 195);
    height:37px
 }
 
@@ -141,16 +162,23 @@ h1{
 #footer3 p{
    flex:1;
    text-align:center;
-   color:rgb(245, 148, 169);
-   background-color:rgb(41, 69, 78);
+   color:rgb(245, 195, 205);
+   background-color:rgb(61, 111, 128);
+   height:37px
+}
+
+#footer4 p{
+   flex:1;
+   text-align:center;
+   color:rgb(245, 195, 205);
+   background-color:rgb(61, 111, 128);
    height:37px
 }
 
 
 
-
 .subbanner{
-  background-color:rgb(32, 85, 138);
+  background-color:rgb(157, 224, 174);
 }
 #banner{
   background-color:rgb(155, 117, 155);
@@ -171,18 +199,49 @@ h1{
 }
 .button{
   text-decoration:none;
-  background-color:rgb(19, 46, 101);
+  background-color:rgb(68, 113, 71);
   color:white;
   border-radius:4px;
   padding:6px;
   box-shadow:2px 2px 2px black;
 }
+
 .button:hover{
-  background-color:rgb(57, 136, 189);
+  background-color:rgb(187, 193, 117);
+  color:black;
 }
+
+#chart1{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:rgb(134, 184, 209);
+  color:rgb(4, 87, 25)
+}
+
+#chart2{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:rgb(166, 211, 234);
+  color:rgb(4, 87, 25)
+}
+
+#chart3{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  background-color:rgb(187, 219, 235);
+  color:rgb(4, 87, 25)
+}
+
 #output{
   flex-wrap:wrap;
 }
+
 .fit{
   width:150px;
   height:150px;
@@ -193,17 +252,100 @@ h1{
   flex:1;
   background-color:rgb(193, 239, 252);
 }
+
 #rightPanel{
   flex:2;
   background-color:rgb(230, 252, 238);
 }
+
 .fitted{
   max-width:200px;
   min-width:200px;
 }
+
 #result{
   background-color: rgb(238, 153, 144);
   color:rgb(165, 7, 7);
   max-width: 200px;
   font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.map-container{
+  display:flex;
+  padding:10px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  color:black;
+  padding:10px;
+  flex:1;
+  text-decoration:none;
+  text-align:center;
+}
+nav a:hover{
+  color:white;
+}
+
+ #map-leftPanel{
+   flex:1;
+   max-height:600px;;
+   overflow-y:scroll;
+ }
+.map-card{
+  flex:1;
+  margin:10px;
+  padding:10px;
+  border:1px solid gray;
+  text-align:center;
+  background-color: rgb(205, 232, 212);
+}
+#map-area{
+  flex:1;
+  width:90%;
+  margin-top:50px;
+  height:400px;    
+  border-radius:10px;
+  box-shadow:2px 2px 2px black;
+  background-color:silver;
+}
+
+.map-heading{
+  font-weight:bold;
+}
+
+.movie h3, .movie p{
+  font-size:18pt;
+}
+.divider{
+  clear:both;
+}
+
+.map-left{
+  float:left;
+  margin:20px;
+  box-shadow:2px 2px 2px gray;  
+}
+.movie h3{
+  font-style: italic;
+}
+#map-output{
+  background-color: rgb(249, 247, 210);
+}
+.map-fitted{
+  max-width:200px;
+  min-width:200px;
+  border-radius:5px;  
+  box-shadow:2px 2px 2px gray;
 }

@@ -7,24 +7,27 @@ async function init(){
   console.log(data);
 }
 
-function ByStatus(){
-  let alive = 0, dead = 0, stump = 0, other = 0;
+function ByProb(){
+  let none = 0, stones = 0, roots = 0, trunk = 0, other = 0;
 
   for(let i = 0; i < data.length; i++){
     let tree = data[i];
-    if(tree.status=="Alive"){
-      alive++;
-    }else if (tree.status=="Dead"){
-      dead++;
-    }else if(tree.status=="Stump"){
-      stump++;
+    if(tree.problems=="None"){
+      none++;
+    }else if (tree.problems=="Stones" || tree.problems=="Stones,BranchOther" || tree.problems=="Stones,BranchLights" || tree.problems=="Stones,WiresRope" || tree.problems=="Stones,WiresRope,BranchLights" || tree.problems=="Stones,TrunkOther" || tree.problems=="Stones,RootOther,BranchOther" || tree.problems=="Stones,RootOther"){
+      stones++;
+    }else if(tree.problems=="RootOther" || tree.problems=="RootOther,TrunkOther,BranchOther"|| tree.problems=="RootOther,BranchOther" || tree.problems=="Stones,RootOther" || tree.problems=="RootOther,TrunkOther"){
+      roots++;
+    }else if(tree.problems=="TrunkOther" || tree.problems=="TrunkLights,BranchLights" || tree.problems=="RootOther,TrunkOther,BranchOther" || tree.problems=="WiresRope,TrunkOther,BranchOther" || tree.problems=="MetalGrates,TrunkOther" || tree.problems=="Stones,TrunkOther" || tree.problems=="RootOther,TrunkOther,BranchOther" || tree.problems=="WiresRope,TrunkLights,BranchLights" || tree.problems=="TrunkOther,BranchLights"){
+      trunk++;
     }else other++;
   }
 
   let chartData = [
-      ["Alive", alive],
-      ["Dead", dead],
-      ["Stump", stump],
+      ["None", none],
+      ["Stones", stones],
+      ["Roots", roots],
+      ["Trunk", trunk],
       ["Other", other]
     ];
 
@@ -32,7 +35,7 @@ function ByStatus(){
 }
 
 function ByName (){
-  let honey = 0, london = 0, ginkgo = 0, redmaple = 0, other = 0; 
+  let honey = 0, london = 0, ginkgo = 0, maple = 0, pinoak = 0, sophora = 0, other = 0; 
 
   for(let i = 0; i < data.length; i++){
     let tree = data[i];
@@ -42,8 +45,12 @@ function ByName (){
       london++;
     }else if(tree.spc_common=="ginkgo"){
       ginkgo++;
-    }else if(tree.spc_common=="red maple"){
-      redmaple++;
+    }else if(tree.spc_common=="Norway maple"){
+      maple++;
+    }else if(tree.spc_common=="pin oak"){
+      pinoak++;
+    }else if(tree.spc_common=="Sophora"){
+      sophora++;
     }else other++;
   }
 
@@ -51,7 +58,9 @@ function ByName (){
       ["Honeylocust", honey],
       ["London planetree", london],
       ["Ginkgo", ginkgo],
-      ["Red maple", redmaple],
+      ["Norway maple", maple],
+      ["Pink oak", pinoak],
+      ["Sophora", sophora],
       ["Other", other]
     ];
 

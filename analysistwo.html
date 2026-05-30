@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Map Analysis</title>    
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="helper.js"></script>
+    <script src="script-map.js"></script>    
+  </head>
+     
+  <body onload="init()">
+    <nav class="map-container">
+        <a href="index.html"> Home Page </a>
+        <a href="info.html"> Info Cards </a>
+        <a href="analysis.html"> Chart Analysis </a>
+        <a href="analysistwo.html"> Map Analysis </a>
+    </nav>
+    <div id="banner3" class="map-container map-center">
+      <h1>Map Analysis</h1>
+    </div>
+    <div class="map-container map-subbanner">
+    </div>
+
+    
+    <div id="map-output" class="map-container">
+      <div id="map-leftPanel" class="map-container"></div>
+      <div id="map-area"></div>
+    </div>
+    
+    <div id="footer3" class="container center">
+      <p>Footer</p>
+    </div>  
+  </body>
+</html>

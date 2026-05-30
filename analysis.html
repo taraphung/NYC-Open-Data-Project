@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Analysis Charts</title>
+    <title>Chart Analysis</title>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="c3.css" rel="stylesheet" type="text/css" />
     <script src="d3.js"></script>
@@ -15,21 +15,22 @@
     <nav class="container">
       <a href="index.html"> Home Page </a>
       <a href="info.html"> Info Cards </a>
-      <a href="analysis.html"> Analysis </a>
+      <a href="analysis.html"> Chart Analysis </a>
+      <a href="analysistwo.html"> Map Analysis </a>
     </nav>
     <div id="banner2" class="container center">
       <h1> Chart Analysis </h1>
     </div>
-    <div class="container">
-      <p><span class="highlight">Scenario: </span> The Bar chart analyzes the status of the trees. </p>
-      <a class="button" onclick="ByStatus()"> Display Bar Chart </a>
+    <div class="container" id="chart1">
+      <p><span class="highlight">Scenario: </span> The Bar chart analyzes the problems of the trees. </p>
+      <a class="button" onclick="ByProb()"> Display Bar Chart </a>
     </div>
-    <div class="container">
-      <p><span class="highlight">Scenario: </span> The Pie chart analyzes some common different tree names/types. </p>
+    <div class="container" id="chart2">
+      <p><span class="highlight">Scenario: </span> The Pie chart analyzes the different tree names/types. </p>
       <a class="button" onclick="ByName()"> Display Pie Chart </a>
     </div>
-    <div class="container">
-      <p><span class="highlight">Scenario: </span> The Donut chart analyzes the amount of health of all the trees.</p>
+    <div class="container" id="chart3">
+      <p><span class="highlight">Scenario: </span> The Donut chart analyzes the health of all the trees.</p>
       <a class="button" onclick="ByHealth()"> Display Donut Chart </a>
     </div>
 
