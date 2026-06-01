@@ -56,7 +56,7 @@ nav a:hover{
 #banner3{
   align-items:center;
   justify-content:center;
-  background-image: url("images/");
+  background-image: url("images/streettree.jpg");
   background-size:cover;
   background-position:center;
   color:white;
@@ -79,8 +79,8 @@ nav a:hover{
 }
 
 #banner3 h1{
-  background-color:rgb(77, 71, 58);
-  color:rgb(211, 170, 205);
+  background-color:rgb(3, 83, 43);
+  color:rgb(196, 238, 198);
   padding:10px;
   border-radius:8px;
 }
@@ -117,7 +117,7 @@ h1{
 }
 
 #one img{
-  width:615px;
+  width:520px;
 }
 
 #two{
@@ -259,7 +259,7 @@ h1{
 }
 
 .fitted{
-  max-width:200px;
+  max-width:250px;
   min-width:200px;
 }
 
@@ -269,13 +269,6 @@ h1{
   max-width: 200px;
   font-size: 20px;
 }
-
-
-
-
-
-
-
 
 
 
@@ -348,4 +341,8 @@ nav a:hover{
   min-width:200px;
   border-radius:5px;  
   box-shadow:2px 2px 2px gray;
+}
+
+.map-subbanner{
+  justify-content:center;
 }
