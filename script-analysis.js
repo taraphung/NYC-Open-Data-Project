@@ -59,7 +59,7 @@ function ByName (){
       ["London planetree", london],
       ["Ginkgo", ginkgo],
       ["Norway maple", maple],
-      ["Pink oak", pinoak],
+      ["Pin oak", pinoak],
       ["Sophora", sophora],
       ["Other", other]
     ];

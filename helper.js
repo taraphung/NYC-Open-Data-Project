@@ -20,8 +20,8 @@ function card( info ){
   let build = `<div class="map-card map-fitted">
                   <h2>${info.spc_common}</h2>
                   <hr>
-                  <h3>Latitude: ${info.latitude}</h3>
-                  <h3>Longitude: ${info.longitude}</h3>
+                  <h4>Latitude: ${info.latitude}</h4>
+                  <h4>Longitude: ${info.longitude}</h4>
                   <p>Zipcode: ${info.zipcode}</p>
                   <p>Address: ${info.address}</p>`;
                   if(info.latitude && info.longitude){
